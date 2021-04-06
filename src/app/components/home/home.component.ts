@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DataTestService } from '../../services/data-test.service';
 import { DataOrdenada } from '../../models/dataTest.model';
 
@@ -9,12 +9,25 @@ import { DataOrdenada } from '../../models/dataTest.model';
   ]
 })
 export class HomeComponent implements OnInit {
-  data:DataOrdenada;
-  constructor(private dataService:DataTestService) { }
+  @Input() datos:DataOrdenada =this.dataService.generarDatos();
+  // data:DataOrdenada;
+  constructor(private dataService:DataTestService) { 
+    // this.data = this.dataService.generarDatos();
+
+  }
 
   ngOnInit(): void {
-    this.data = this.dataService.generarDatos();
-    console.log(this.data);
+    console.log(this.datos)
+
+    for (let item of this.datos.Children){
+      // console.log(item)
+    }
+    // console.log(this.datos.Children)
+    // for(let data of this.data.Children ){
+    //   console.log(data)
+    // }
+    
+    
   }
 
 }

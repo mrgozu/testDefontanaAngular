@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { DataOrdenada } from '../../models/dataTest.model';
 
@@ -9,15 +9,11 @@ import { DataOrdenada } from '../../models/dataTest.model';
   ]
 })
 export class MostrarDataComponent implements OnInit {
-  @Input() ID:string;
-  @Input() Name:string;
-  @Input() Children:DataOrdenada[];
+  
   constructor() { }
 
   ngOnInit(): void {
-  console.log(this.ID);
-  console.log();
-  
+
  
   }
 
