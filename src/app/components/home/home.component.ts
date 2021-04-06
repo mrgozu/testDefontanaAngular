@@ -10,24 +10,12 @@ import { DataOrdenada } from '../../models/dataTest.model';
 })
 export class HomeComponent implements OnInit {
   @Input() datos:DataOrdenada =this.dataService.generarDatos();
-  // data:DataOrdenada;
-  constructor(private dataService:DataTestService) { 
-    // this.data = this.dataService.generarDatos();
-
-  }
+  
+  constructor(private dataService:DataTestService) { }
 
   ngOnInit(): void {
     console.log(this.datos)
 
-    for (let item of this.datos.Children){
-      // console.log(item)
-    }
-    // console.log(this.datos.Children)
-    // for(let data of this.data.Children ){
-    //   console.log(data)
-    // }
-    
-    
   }
 
 }

@@ -1,12 +1,12 @@
 
-<!-- <app-mostrar-data ID="{{data.ID}}" Name="{{data.Name}}" Children="{{data.Children}}" ></app-mostrar-data> -->
 
-<div>
-    ID: {{datos.ID}}, Name: {{datos.Name}}
+
+<ul>
+    <li>{{datos.ID}}, Name: {{datos.Name}}</li> 
     <div *ngIf="datos.Children.length!=0">
         <div *ngFor="let dato of datos.Children">
             
             <app-home [datos]="dato"></app-home>
         </div>
     </div>
-</div>
+</ul>
